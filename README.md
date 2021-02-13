@@ -20,9 +20,9 @@ _Realizar una aplicacion web para el procesamiento y presentaci√≥n de informaci√
 - type Script 
 - JavaScript **ES6**
 ### Framework 
--- Angular **9.1.7**
+- Angular **9.1.7**
 ### Herramientas requeridas
 - gitbash **git version 2.27.0.windows.1**
 - nodeJS **v12.16.2**
 - Visual Studio Code
-    -Bracket Pair Colorizer
+    - Bracket Pair Colorizer
