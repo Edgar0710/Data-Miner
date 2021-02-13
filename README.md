@@ -14,4 +14,4 @@ _Realizar una aplicacion web para el procesamiento y presentación de informaci�
 - Permitir el ingreso y asignar permisos a diferentes usuarios a través de un login.
 - Poblar una base de datos a través del procesamiento de información proveniente de archivos excel. 
 - Mostrar información usando diferentes parámetros como fecha, ciudad, persona, etc.
-- Realizar búsquedas ingresando palabras 
+- Realizar búsquedas ingresando palabras. 
