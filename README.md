@@ -14,3 +14,5 @@ _Realizar una aplicacion web para el procesamiento y presentación de informaci�
 - Poblar una base de datos a través del procesamiento de información proveniente de archivos excel. 
 - Mostrar información usando diferentes parámetros como fecha, ciudad, persona, etc.
 - Realizar búsquedas ingresando palabras 
+- Mostrar Graficas en base a consultas espesificas
+
