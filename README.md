@@ -26,3 +26,7 @@ _Realizar una aplicacion web para el procesamiento y presentaci√≥n de informaci√
 - nodeJS **v12.16.2**
 - Visual Studio Code
     - Bracket Pair Colorizer
+    - HTML Format
+    - Angular Snippets (Version 11)
+
+
