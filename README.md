@@ -10,3 +10,7 @@ _Realizar una aplicacion web para el procesamiento y presentación de informaci�
 ## Usuarios 
 * Administrador. Este usuario podrá subir archivos excel que serán procesados por la aplicación web y determinará que información será mostrada a los invitados. 
 * Invitado. Este usuario sólo podrá ver la información permitida por el usuario administrador.  
+## Funcionalidades
+- Poblar una base de datos a través del procesamiento de información proveniente de archivos excel. 
+- Mostrar información usando diferentes parámetros como fecha, ciudad, persona, etc.
+- Realizar búsquedas ingresando palabras 
