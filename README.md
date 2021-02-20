@@ -1,5 +1,5 @@
 ![img](http://www.d3a.org/wp-content/uploads/2014/07/header-data-management-1038x337.png)
-# Data-Miner
+# Data-Miner:
 _Procesador de datos para encuestas Microsoft Forms_
 ## Integrantes ✒️
 * Edgar Carrera Carrasco 
