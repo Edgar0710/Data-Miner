@@ -28,5 +28,12 @@ _Realizar una aplicacion web para el procesamiento y presentaci√≥n de informaci√
     - Bracket Pair Colorizer
     - HTML Format
     - Angular Snippets (Version 11)
+### Modelo Base de datos
+_La base de datos se recomienda seguir el siguiente modelo ya sea usando MySQL o SQL Server_
+![img](https://github.com/Edgar0710/Data-Miner/tree/main/documents/diagrama_v2.png)
+### Backend
+Para el backen se usara una arquitecutura en 3 una capa de acceso o Controller,La capa de datos que contendra las conexiones y la capa de Bussiness la cual
+tendra todas las reglas de negocio para procesamiento de datos 
+![img](https://github.com/Edgar0710/Data-Miner/tree/main/documents/diagrama.png)
 
 
