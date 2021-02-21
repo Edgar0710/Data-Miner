@@ -1,4 +1,4 @@
-![img](http://www.d3a.org/wp-content/uploads/2014/07/header-data-management-1038x337.png)
+
 # Data-Miner:
 _Procesador de datos para encuestas Microsoft Forms_
 ## Integrantes ✒️
@@ -35,5 +35,6 @@ _La base de datos se recomienda seguir el siguiente modelo ya sea usando MySQL o
 Para el backen se usara una arquitecutura en 3 una capa de acceso o Controller,La capa de datos que contendra las conexiones y la capa de Bussiness la cual
 tendra todas las reglas de negocio para procesamiento de datos 
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/diagrama.png)
-
-
+### Views
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/404.jpeg)
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/login.jpeg)
