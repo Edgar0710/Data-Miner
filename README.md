@@ -18,13 +18,16 @@ _Realizar una aplicacion web para el procesamiento y presentaci√≥n de informaci√
 ## Entorno de Desarrollo
 ### Leguajes 
 - type Script 
-- JavaScript **ES6**
+- JavaScript **ES6+**
+- Base de datos:SQL Server 2019 o MySQL 8.0 (recomendados)
+- Backend Node JS o ASP.NET Core 3.0 (Recomendados)
 ### Framework 
 - Angular **9.1.7**
 ### Herramientas requeridas
 - gitbash **git version 2.27.0.windows.1**
 - nodeJS **v12.16.2**
-- Visual Studio Code
+- Visual Studio Code 
+- Extenciones para Visual Studio Code
     - Bracket Pair Colorizer
     - HTML Format
     - Angular Snippets (Version 11)
@@ -38,3 +41,6 @@ tendra todas las reglas de negocio para procesamiento de datos
 ### Views
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/404.jpeg)
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/login.jpeg)
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/page.png)
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/page-2.png)
+
