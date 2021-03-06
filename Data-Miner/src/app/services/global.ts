@@ -1,3 +1,3 @@
 export var GLOBAL = {
-  url: 'https://localhost:44304/api/Usuario/',
+  url: 'https://dataminermsforms-api.conveyor.cloud/swagger/api',
 };

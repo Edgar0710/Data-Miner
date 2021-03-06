@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   public btnLogin() {
     console.log(this.loginModel);
-    
+
     this._userService.login(this.loginModel).subscribe(
       (response) => {
         console.log(response);
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         let id = jsonObject.Result[0].cUSU_Id;
         let correo = jsonObject.Result[0].cUSU_Correo;
 
-        this.router.navigate(['email/', nombre, id, correo]);
+        this.router.navigate(['email/']);
       },
       (error) => {
         //Mostrar un error
