@@ -7,14 +7,13 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./upload-file.component.css'],
 })
 export class UploadFileComponent implements OnInit {
-  youtube = 'https://www.youtube.com/embed/VAkio68d51A';
-
-  urlSegura;
-  nombre = '<script>alert("Hello")</script>';
-
   constructor(private sanitizer: DomSanitizer) {
-    this.urlSegura = sanitizer.bypassSecurityTrustHtml(this.youtube);
+    // this.urlSegura = sanitizer.bypassSecurityTrustHtml(this.youtube);
   }
 
   ngOnInit(): void {}
+
+  onFileSelected(event: any) {
+    console.log(event);
+  }
 }

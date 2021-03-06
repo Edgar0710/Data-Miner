@@ -1,15 +1,24 @@
 <section>
   <div class="container containerSize text-center">
     <div class="row rowPosition text-center">
-      <h1 class="mx-auto">Bienvenido {{ nombre }}</h1>
+      <h1 class="mx-auto">Bienvenido</h1>
     </div>
     <div class="row text-center">
       <h1 class="mx-auto">Sube tu archivo EXCEL</h1>
     </div>
     <div class="row text-center">
-      <div class="box text-center mx-auto">
-        <h2>Arrastra el archivo</h2>
-        <div class="dropzone"></div>
+      <div class="custom-file">
+        <input
+          type="file"
+          class="custom-file-input"
+          id="customFileLang"
+          lang="es"
+
+          (change)="onFileSelected($event)"
+        />
+        <label class="custom-file-label" for="customFileLang"
+          >Seleccionar Archivo</label
+        >
       </div>
     </div>
   </div>
