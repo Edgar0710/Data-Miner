@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         let id = jsonObject.Result[0].cUSU_Id;
         let correo = jsonObject.Result[0].cUSU_Correo;
 
-        this.router.navigate(['email/']);
+        this.router.navigate(['upload']);
       },
       (error) => {
         //Mostrar un error
