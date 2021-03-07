@@ -19,25 +19,21 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   public btnLogin() {
-    console.log(this.loginModel);
-
     this._userService.login(this.loginModel).subscribe(
       (response) => {
         console.log(response);
 
         this._userService.users = JSON.parse(JSON.stringify(response)).users;
-
-        var jsonObject = JSON.parse(JSON.stringify(response));
-        let nombre = jsonObject.Result[0].cUSU_Nombre;
-        let id = jsonObject.Result[0].cUSU_Id;
-        let correo = jsonObject.Result[0].cUSU_Correo;
-
         this.router.navigate(['upload']);
       },
       (error) => {
-        //Mostrar un error
         console.log(error);
       }
     );
   }
 }
+
+      //  var jsonObject = JSON.parse(JSON.stringify(response));
+        //let nombre = jsonObject.Result[0].cUSU_Nombre;
+        // let id = jsonObject.Result[0].cUSU_Id;
+        // let correo = jsonObject.Result[0].cUSU_Correo;

@@ -35,7 +35,12 @@ export class UserService {
     headers.append('Access-Control-Allow-Origin', '*');
     return this.http
       .get(
-        this.url + '/Usuario/Login' + '?email=' + obj.correo + '&password=' + password64,
+        this.url +
+          'Usuario/Login' +
+          '?email=' +
+          obj.correo +
+          '&password=' +
+          password64,
         {
           headers,
         }

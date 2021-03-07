@@ -1,3 +1,4 @@
+import { templateJitUrl } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import {
   CanActivate,
@@ -9,13 +10,13 @@ import {
 import { Observable } from 'rxjs';
 import { AppRoutingModule } from 'src/app/components/app/app-routing.module';
 
-//@Injectable({
-//providedIn: 'root',
-//})
-//export class AuthGuard implements CanActivate {
-// constructor(private _data: DataService, private _router: Router) {}
+@Injectable({
+  providedIn: 'root',
+})
+export class AuthGuard implements CanActivate {
+  constructor(private _router: Router) {}
 
-/* canActivate(
+  canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ):
@@ -23,10 +24,10 @@ import { AppRoutingModule } from 'src/app/components/app/app-routing.module';
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (!this._data.logueado) {
+    if (10) {
       alert('No tienes acceso');
       this._router.navigate(['/login']);
     }
-    //return this._data.logueado; */
-//}
-//}
+    return true;
+  }
+}
