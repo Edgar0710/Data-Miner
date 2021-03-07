@@ -3,23 +3,32 @@
     <div class="row rowPosition text-center">
       <h1 class="mx-auto">Bienvenido</h1>
     </div>
-    <div class="row text-center">
-      <h1 class="mx-auto">Sube tu archivo EXCEL</h1>
-    </div>
-    <div class="row text-center">
-      <div class="custom-file">
-        <input
-          type="file"
-          class="custom-file-input"
-          id="customFileLang"
-          lang="es"
-
-          (change)="onFileSelected($event)"
-        />
-        <label class="custom-file-label" for="customFileLang"
-          >Seleccionar Archivo</label
-        >
+    <form>
+      <div class="row text-center">
+        <h1 class="mx-auto">Sube tu archivo EXCEL</h1>
       </div>
-    </div>
+      <div class="row text-center">
+        <div class="custom-file">
+          <input
+            type="file"
+            class="custom-file-input"
+            id="customFileLang"
+            lang="es"
+            (change)="onFileSelected($event)"
+            id="file"
+          />
+          <label class="custom-file-label" for="customFileLang"
+            >Seleccionar Archivo</label
+          >
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="text-center mx-auto mt-5">
+          <button type="button" (click)="onUpload($event)">
+            Cargar Archivo
+          </button>
+        </div>
+      </div>
+    </form>
   </div>
 </section>

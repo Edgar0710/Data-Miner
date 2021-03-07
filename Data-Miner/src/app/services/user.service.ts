@@ -47,5 +47,31 @@ export class UserService {
       )
       .pipe(map((res) => res));
   }
+
+
+  upload(fd: FormData) {
+
+    let headers = new HttpHeaders();
+    headers.append('Access-Control-Allow-Headers', 'Content-Type');
+    headers.append('Access-Control-Allow-Methods', 'GET');
+    headers.append('Access-Control-Allow-Origin', '*');
+    return this.http
+      .post(
+        this.url +
+          'Form/InsertaForm' +
+          '?nombre=' +
+          'test' +
+          '&descripcion=' +
+          'test' +
+          '&usuario=' +
+          1,fd,
+        {
+          headers,
+        },
+      )
+      .pipe(map((res) => res));
+  }
+
+
   users: User[] = [];
 }
