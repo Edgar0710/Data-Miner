@@ -19,7 +19,7 @@ export class UploadFileComponent implements OnInit {
     private http: HttpClient,
     public _userService: UserService
   ) {
-    // this.urlSegura = sanitizer.bypassSecurityTrustHtml(this.youtube);
+  //this.urlSegura = sanitizer.bypassSecurityTrustHtml(this.youtube);
   }
 
   onFileSelected(event: any) {
