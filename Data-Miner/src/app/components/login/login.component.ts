@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginModel } from 'src/app/models/loginModel';
-import { UserService } from 'src/app/services/user.service';
+import { LoginModel } from 'src/app/shared/models/loginModel';
+import { UserService } from 'src/app/shared/services/user.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 

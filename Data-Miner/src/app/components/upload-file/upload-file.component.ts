@@ -1,7 +1,7 @@
 import { Component, OnInit, Sanitizer } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/shared/services/user.service';
 import { isNull } from '@angular/compiler/src/output/output_ast';
 import { FormBuilder, Validators } from '@angular/forms';
 

@@ -7,9 +7,9 @@ import {
 } from '@angular/common/http';
 import { GLOBAL } from './global';
 import { map } from 'rxjs/operators';
-import { LoginModel } from 'src/app/models/loginModel';
+import { LoginModel } from 'src/app/shared/models/loginModel';
 import { observable } from 'rxjs';
-import { User } from 'src/app/models/user';
+import { User } from 'src/app/shared/models/user';
 
 @Injectable()
 export class UserService {
