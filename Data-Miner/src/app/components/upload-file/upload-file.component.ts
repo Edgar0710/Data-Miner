@@ -19,7 +19,7 @@ export class UploadFileComponent implements OnInit {
     private http: HttpClient,
     public _userService: UserService
   ) {
-  //this.urlSegura = sanitizer.bypassSecurityTrustHtml(this.youtube);
+    //this.urlSegura = sanitizer.bypassSecurityTrustHtml(this.youtube);
   }
 
   onFileSelected(event: any) {
@@ -28,7 +28,7 @@ export class UploadFileComponent implements OnInit {
 
   onUpload(event: any) {
     const fd = new FormData();
-    fd.append('image', this.selectedFile, this.selectedFile.name);
+    fd.append('file', this.selectedFile, this.selectedFile.name);
 
     this._userService.upload(fd).subscribe(
       (response) => {

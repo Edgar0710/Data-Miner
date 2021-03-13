@@ -24,10 +24,6 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (10) {
-      alert('No tienes acceso');
-      this._router.navigate(['/login']);
-    }
     return true;
   }
 }

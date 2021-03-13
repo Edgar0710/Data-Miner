@@ -9,7 +9,7 @@ import { GLOBAL } from './global';
 import { map } from 'rxjs/operators';
 import { LoginModel } from 'src/app/shared/models/loginModel';
 import { observable } from 'rxjs';
-import { User } from 'src/app/shared/models/user';
+import { UserModel } from 'src/app/shared/models/userModel';
 
 @Injectable()
 export class UserService {
@@ -28,6 +28,7 @@ export class UserService {
     let obj: MyObj = JSON.parse(json);
 
     let password64 = btoa(obj.password);
+    console.log(password64);
 
     let headers = new HttpHeaders();
     headers.append('Access-Control-Allow-Headers', 'Content-Type');
@@ -48,9 +49,7 @@ export class UserService {
       .pipe(map((res) => res));
   }
 
-
   upload(fd: FormData) {
-
     let headers = new HttpHeaders();
     headers.append('Access-Control-Allow-Headers', 'Content-Type');
     headers.append('Access-Control-Allow-Methods', 'GET');
@@ -64,14 +63,14 @@ export class UserService {
           '&descripcion=' +
           'test' +
           '&usuario=' +
-          1,fd,
+          1,
+        fd,
         {
           headers,
-        },
+        }
       )
       .pipe(map((res) => res));
   }
 
-
-  users: User[] = [];
+  users: UserModel[] = [];
 }

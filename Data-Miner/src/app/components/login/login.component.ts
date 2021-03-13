@@ -3,6 +3,7 @@ import { LoginModel } from 'src/app/shared/models/loginModel';
 import { UserService } from 'src/app/shared/services/user.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { UserModel } from 'src/app/shared/models/userModel';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +13,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   public loginModel: LoginModel;
+  public userModel: UserModel;
   constructor(public _userService: UserService, private router: Router) {
     this.loginModel = new LoginModel('', '');
+    this.userModel = new UserModel(null, '', '', '', null, '', '');
   }
 
   ngOnInit(): void {}
@@ -21,9 +24,12 @@ export class LoginComponent implements OnInit {
   public btnLogin() {
     this._userService.login(this.loginModel).subscribe(
       (response) => {
-        console.log(response);
+        this._userService.users = JSON.parse(JSON.stringify(response));
 
-        this._userService.users = JSON.parse(JSON.stringify(response)).users;
+        this.userModel = JSON.parse(JSON.stringify(response)).result;
+
+        console.log(this.userModel.us_athorization);
+
         this.router.navigate(['upload']);
       },
       (error) => {
@@ -33,7 +39,4 @@ export class LoginComponent implements OnInit {
   }
 }
 
-      //  var jsonObject = JSON.parse(JSON.stringify(response));
-        //let nombre = jsonObject.Result[0].cUSU_Nombre;
-        // let id = jsonObject.Result[0].cUSU_Id;
-        // let correo = jsonObject.Result[0].cUSU_Correo;
+
