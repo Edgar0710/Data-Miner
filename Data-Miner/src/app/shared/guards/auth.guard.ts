@@ -9,12 +9,13 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AppRoutingModule } from 'src/app/components/app/app-routing.module';
+import {UserService} from 'src/app/shared/services/user.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private _router: Router) {}
+  constructor(private _router: Router, private _userService:UserService) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -24,6 +25,6 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return true;
+    return false;
   }
 }

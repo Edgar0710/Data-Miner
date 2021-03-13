@@ -6,11 +6,12 @@ import { UploadFileComponent } from '../upload-file/upload-file.component';
 import { DisplayComponent } from '../display/display.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from 'src/app/shared/guards/auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'upload', component: UploadFileComponent },
+  { path: 'upload', component: UploadFileComponent, canActivate: [AuthGuard] },
   { path: 'display', component: DisplayComponent },
   { path: 'notFound', component: NotFoundComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
