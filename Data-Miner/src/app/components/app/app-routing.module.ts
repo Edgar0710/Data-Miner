@@ -9,10 +9,22 @@ import { FormsModule } from '@angular/forms';
 import { AuthGuard } from 'src/app/shared/guards/auth.guard';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'upload',
+    component: UploadFileComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'display',
+    component: DisplayComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'register', component: RegisterComponent },
-  { path: 'upload', component: UploadFileComponent, canActivate: [AuthGuard] },
-  { path: 'display', component: DisplayComponent },
+
   { path: 'notFound', component: NotFoundComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },

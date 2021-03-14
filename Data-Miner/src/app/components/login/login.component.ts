@@ -28,8 +28,9 @@ export class LoginComponent implements OnInit {
 
         this.userModel = JSON.parse(JSON.stringify(response)).result;
 
-        console.log(this.userModel.us_athorization);
-
+        localStorage.setItem('token', String(this.userModel.us_athorization));
+        localStorage.setItem('nombre', String(this.userModel.ro_nombre));
+        localStorage.setItem('id', String(this.userModel.us_id));
         this.router.navigate(['upload']);
       },
       (error) => {
@@ -38,5 +39,3 @@ export class LoginComponent implements OnInit {
     );
   }
 }
-
-

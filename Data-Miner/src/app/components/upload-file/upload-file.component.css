@@ -16,29 +16,39 @@ h1 {
   color: white;
 }
 
-.dropzone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-width: 50vw;
-  font-weight: 200;
-  height: 300px;
-  border: 2px dashed #f16624;
-  border-radius: 5px;
-  background: white;
-  margin: 10px 0;
+.buttonStyle {
+  background-color: #ce473c;
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  height: 60px;
+}
+.cardLogin {
+  background-color: #df5248;
+  color: white;
 }
 
-.dropzone:hover {
-  border: 2px solid #f16624;
-  color: #dadada !important;
+#lblFile {
+  background-color: #e15d51;
+  color: white;
 }
 
-.dropzone:file-label {
-  font-size: 1.2em;
+@media screen and (max-width: 600px) {
+  .brandName {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .buttonStyle {
+    font-size: 18px;
+    height: 40px;
+  }
 }
 
-progress::-webkit-progress-value {
-  transition: width 0.1s ease;
+.brandName {
+  font-size: 40px;
+}
+.textBienvenido {
+  font-weight: lighter;
 }

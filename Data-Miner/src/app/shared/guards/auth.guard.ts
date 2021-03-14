@@ -1,4 +1,3 @@
-import { templateJitUrl } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import {
   CanActivate,
@@ -8,14 +7,12 @@ import {
   Router,
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AppRoutingModule } from 'src/app/components/app/app-routing.module';
-import {UserService} from 'src/app/shared/services/user.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private _router: Router, private _userService:UserService) {}
+  constructor(private router: Router) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -25,6 +22,11 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
+    const token = localStorage.getItem('token');
+    if (token !== null) {
+      return true;
+    }
+    this.router.navigate(['login']);
     return false;
   }
 }
