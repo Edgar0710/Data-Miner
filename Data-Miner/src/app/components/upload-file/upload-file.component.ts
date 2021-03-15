@@ -37,11 +37,11 @@ export class UploadFileComponent implements OnInit {
     const fd = new FormData();
     fd.append('file', this.selectedFile, this.selectedFile.name);
     this.fileService.getForms().subscribe((response) => {
-      console.log(response);
-    },
-    (error) => {
-      console.log(error);
-    });
+        console.log(response);
+      },
+      (error) => {
+        console.log(error);
+      });
    /* this.fileService.upload(fd).subscribe(
       (response) => {
         console.log(response);
