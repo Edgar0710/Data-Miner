@@ -15,11 +15,18 @@
               &nbsp;&nbsp;
               <h1 class="textIngresa">Ingresa.</h1>
             </div>
-            <form class="login-form mt-4" noValidate>
+            <form
+              #formLogin="ngForm"
+              (ngSubmit)="btnLogin()"
+              class="login-form mt-4"
+              noValidate
+            >
               <div class="row">
                 <div class="col-lg-12">
                   <div class="form-group position-relative">
                     <input
+                      #email="ngModel"
+                      [(ngModel)]="loginModel.correo"
                       type="email"
                       class="form-control border-0 pl-5"
                       placeholder="Email"
@@ -35,6 +42,9 @@
                 <div class="col-lg-12">
                   <div class="form-group position-relative">
                     <input
+                      #password="ngModel"
+                      [(ngModel)]="loginModel.password"
+                      name="password"
                       type="password"
                       class="form-control border-0 pl-5"
                       placeholder="Contraseña"
@@ -44,10 +54,7 @@
                 </div>
 
                 <div class="col-lg-12 mt-2">
-                  <button
-                    class="btn buttonStyle shadow btn-block"
-                    [routerLink]="['/home']"
-                  >
+                  <button class="btn buttonStyle shadow btn-block">
                     Ingresar
                   </button>
                 </div>

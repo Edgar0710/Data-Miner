@@ -1,16 +1,58 @@
 <section>
-  <div class="container containerSize text-center">
-    <div class="row rowPosition text-center">
-      <h1 class="mx-auto">Bienvenido {{ nombre }}</h1>
-    </div>
-    <div class="row text-center">
-      <h1 class="mx-auto">Sube tu archivo EXCEL</h1>
-    </div>
-    <div class="row text-center">
-      <div class="box text-center mx-auto">
-        <h2>Arrastra el archivo</h2>
-        <div class="dropzone"></div>
+  <div class="container containerSize">
+    <div class="row justify-content-center rowPosition">
+      <div class="col-lg-12 my-5 col-md-12"></div>
+      <div class="col-lg-5 col-md-6">
+        <div class="row">
+          <h1 class="mx-auto text-white brandName">
+            <span class="material-icons"> file_present </span>&nbsp;Data Miner
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="mx-auto text-white textBienvenido">
+              Bienvenido {{ nombre }}
+            </h2>
+          </div>
+        </div>
+        <div class="card border-0">
+          <div class="card-body cardLogin">
+            <form>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      lang="es"
+                      (change)="onFileSelected($event)"
+                      id="file"
+                    />
+                    <label
+                      id="lblFile"
+                      class="custom-file-label"
+                      for="customFileLang"
+                      >{{ lblFile }}</label
+                    >
+                  </div>
+                </div>
+
+                <div class="col-lg-12 mt-1 pt-5">
+                  <button
+                    class="btn buttonStyle shadow btn-block"
+                    type="button"
+                    (click)="onUpload($event)"
+                  >
+                    Cargar Archivo
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!---->
       </div>
+      <!--end col-->
     </div>
+    <!--end row-->
   </div>
 </section>
