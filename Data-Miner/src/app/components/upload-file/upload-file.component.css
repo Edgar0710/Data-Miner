@@ -33,7 +33,7 @@ h1 {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 0.8; /* Firefox */
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .brandName {
@@ -41,6 +41,44 @@ h1 {
 }
 .textBienvenido {
   font-weight: lighter;
+}
+
+
+input[type="text"],
+textarea {
+  background-color: #e15d51;
+  color: white;
+  height: 30px;
+  font-size: 15px;
+}
+
+input[type="textarea"],
+textarea {
+  background-color: #e15d51;
+  color: white;
+  height: 15px;
+}
+
+input:focus {
+  box-shadow: 0 0 10px white;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 0.8; /* Firefox */
+  font-size: 15px;
+}
+
+
+textarea[type="text"],
+textarea {
+  background-color: #e15d51;
+  color: white;
+  height: 100px;
+}
+textarea:focus {
+  box-shadow: 0 0 10px white;
 }
 
 @media screen and (max-width: 600px) {
@@ -54,42 +92,15 @@ h1 {
     font-size: 18px;
     height: 40px;
   }
+  #lblFile {
+    background-color: #e15d51;
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: white;
+      opacity: 0.8; /* Firefox */
+      font-size: 15px;
+      padding-right: 30px;
+  }
 }
 
-input[type="text"],
-textarea {
-  background-color: #e15d51;
-  color: white;
-  height: 30px;
-}
-
-input[type="textarea"],
-textarea {
-  background-color: #e15d51;
-  color: white;
-  height: 30px;
-}
-
-input:focus {
-  box-shadow: 0 0 10px white;
-}
-
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 0.8; /* Firefox */
-  font-size: 20px;
-}
-
-
-textarea[type="text"],
-textarea {
-  background-color: #e15d51;
-  color: white;
-  height: 30px;
-}
-textarea:focus {
-  box-shadow: 0 0 10px white;
-}
 
 
