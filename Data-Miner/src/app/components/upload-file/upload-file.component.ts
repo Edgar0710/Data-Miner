@@ -15,8 +15,8 @@ import { UserModel } from 'src/app/shared/models/userModel';
 export class UploadFileComponent implements OnInit {
   selectedFile: File = null;
   user: UserModel =JSON.parse(localStorage.getItem("usuario"));
-  nombre: String =this.user.us_nombre;
-  lblFile: String = "Sube tu archivo aquí";
+  nombre: string =this.user.us_nombre;
+  lblFile: string = "Sube tu archivo aquí";
 
 
   constructor(
@@ -36,20 +36,14 @@ export class UploadFileComponent implements OnInit {
   onUpload(event: any) {
     const fd = new FormData();
     fd.append('file', this.selectedFile, this.selectedFile.name);
-    this.fileService.getForms().subscribe((response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log(error);
-      });
-   /* this.fileService.upload(fd).subscribe(
+    this.fileService.upload(fd).subscribe(
       (response) => {
         console.log(response);
       },
       (error) => {
         console.log(error);
       }
-    );*/
+    );
   }
 
   ngOnInit(): void {}
