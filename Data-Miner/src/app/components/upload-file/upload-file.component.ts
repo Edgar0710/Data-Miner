@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { FileService } from 'src/app/shared/services/file.service';
 import { isNull } from '@angular/compiler/src/output/output_ast';
 import { FormBuilder, Validators } from '@angular/forms';
+import { UserModel } from 'src/app/shared/models/userModel';
 
 @Component({
   selector: 'app-upload-file',
@@ -13,8 +14,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class UploadFileComponent implements OnInit {
   selectedFile: File = null;
-  nombre: string = localStorage.getItem('nombre');
-  lblFile: string = "Sube tu archivo aquí";
+  user: UserModel =JSON.parse(localStorage.getItem("usuario"));
+  nombre: String =this.user.us_nombre;
+  lblFile: String = "Sube tu archivo aquí";
 
 
   constructor(
