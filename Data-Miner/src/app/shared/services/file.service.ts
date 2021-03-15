@@ -24,7 +24,7 @@ export class FileService {
     headers.append('Access-Control-Allow-Headers', 'Content-Type');
     headers.append('Access-Control-Allow-Methods', '*');
     headers.append('Access-Control-Allow-Origin', '*');
-    headers.append('Authorization',`Bearer ${this.user.us_athorization}`)
+
     return this.http
       .post(
         this.url +
