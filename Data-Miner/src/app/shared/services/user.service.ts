@@ -30,10 +30,10 @@ export class UserService {
     let password64 = btoa(obj.password);
     let headers = new HttpHeaders();
     headers.append('Access-Control-Allow-Headers', 'Content-Type');
-    headers.append('Access-Control-Allow-Methods', 'GET');
+    headers.append('Access-Control-Allow-Methods', '*');
     headers.append('Access-Control-Allow-Origin', '*');
     return this.http
-      .get(
+      .post(
         this.url +
           'Usuario/Login' +
           '?email=' +
