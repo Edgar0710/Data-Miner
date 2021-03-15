@@ -12,11 +12,12 @@ import { UserModel } from '../models/userModel';
 @Injectable()
 export class FileService {
   public url: string;
-  public user:UserModel;
+  public user: UserModel;
+  public bearer:string;
   constructor(private http: HttpClient) {
     this.url = GLOBAL.url;
-    this.user=JSON.parse(localStorage.getItem("usuario"));
-
+    this.user = JSON.parse(localStorage.getItem("usuario"));
+    this.bearer=''+this.user.us_athorization;
   }
 
   upload(fd: FormData) {
@@ -28,13 +29,13 @@ export class FileService {
     return this.http
       .post(
         this.url +
-          'Form/InsertaForm' +
-          '?nombre=' +
-          'test' +
-          '&descripcion=' +
-          'test' +
-          '&usuario=' +
-           this.user.us_id,
+        'Form/InsertaForm' +
+        '?nombre=' +
+        'test' +
+        '&descripcion=' +
+        'test' +
+        '&usuario=' +
+        this.user.us_id,
         fd,
         {
           headers,
@@ -42,4 +43,22 @@ export class FileService {
       )
       .pipe(map((res) => res));
   }
+
+  getForms() {
+
+    let headers = new HttpHeaders();
+
+    headers.set('Access-Control-Allow-Headers', 'Content-Type');
+    headers.set('Access-Control-Allow-Methods', '*');
+    headers.set('Access-Control-Allow-Origin', '*');
+    headers.set('Authorization','bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTVE9PSIsImV4cCI6MTYxNTc5NzYwMiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMDcvIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMDcvIn0.VCZDmTuxxA2-dVYOXWdphTh20phdZj0CKw2h9i5aEYw')
+    return this.http
+      .get(
+        this.url +
+        'Form/GetForms?usuario=' + this.user.us_id,
+       {headers:headers}
+      )
+      .pipe(map((res) => res));
+  }
 }
+

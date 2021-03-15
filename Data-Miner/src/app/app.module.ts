@@ -11,11 +11,6 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { JwtModule } from "@auth0/angular-jwt";
-import { GLOBAL } from './shared/services/global';
-export function tokenGetter() {
-  return JSON.parse(localStorage.getItem("usuario")).us_athorization;
-}
 
 @NgModule({
   declarations: [
@@ -33,13 +28,6 @@ export function tokenGetter() {
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-        whitelistedDomains: [GLOBAL.url],
-        blacklistedRoutes: []
-      }
-    })
   ],
   providers: [],
   bootstrap: [AppComponent],
