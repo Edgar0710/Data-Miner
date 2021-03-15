@@ -43,4 +43,4 @@ tendra todas las reglas de negocio para procesamiento de datos
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/login.jpeg)
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/page.png)
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/page-2.png)
-## [API](https://github.com/Edgar0710/Api.DataMiner)
+## [API](https://github.com/Edgar0710/DataMiner.api)
