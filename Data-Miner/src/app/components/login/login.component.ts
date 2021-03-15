@@ -27,10 +27,7 @@ export class LoginComponent implements OnInit {
         this._userService.users = JSON.parse(JSON.stringify(response));
 
         this.userModel = JSON.parse(JSON.stringify(response)).result;
-
-        localStorage.setItem('token', String(this.userModel.us_athorization));
-        localStorage.setItem('nombre', String(this.userModel.ro_nombre));
-        localStorage.setItem('id', String(this.userModel.us_id));
+         localStorage.setItem('usuario',JSON.stringify(this.userModel));
         this.router.navigate(['upload']);
       },
       (error) => {

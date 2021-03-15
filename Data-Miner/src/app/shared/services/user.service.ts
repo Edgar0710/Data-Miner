@@ -33,7 +33,7 @@ export class UserService {
     headers.append('Access-Control-Allow-Methods', 'GET');
     headers.append('Access-Control-Allow-Origin', '*');
     return this.http
-      .get(
+      .post(
         this.url +
           'Usuario/Login' +
           '?email=' +
