@@ -30,20 +30,26 @@ export class UploadFileComponent implements OnInit {
   onFileSelected(event: any) {
     this.selectedFile = <File>event.target.files[0];
     this.lblFile=this.selectedFile.name;
+
   }
 
   onUpload(event: any) {
     const fd = new FormData();
     fd.append('file', this.selectedFile, this.selectedFile.name);
-
-    this.fileService.upload(fd).subscribe(
+    this.fileService.getForms().subscribe((response) => {
+      console.log(response);
+    },
+    (error) => {
+      console.log(error);
+    });
+   /* this.fileService.upload(fd).subscribe(
       (response) => {
         console.log(response);
       },
       (error) => {
         console.log(error);
       }
-    );
+    );*/
   }
 
   ngOnInit(): void {}
