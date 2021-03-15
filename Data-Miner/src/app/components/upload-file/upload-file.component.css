@@ -28,6 +28,11 @@ h1 {
   color: white;
 }
 
+#lblFile {
+  background-color: #e15d51;
+  color: white;
+}
+
 .brandName {
   font-size: 40px;
 }

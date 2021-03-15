@@ -24,15 +24,12 @@
                     <input
                       type="file"
                       lang="es"
-                      onchange="onFileSelected($event)"
+                      (change)="onFileSelected($event)"
                       id="file"
                     />
-                    <label
-                      id="lblFile"
-                      class="custom-file-label"
-                      for="customFileLang"
-                      >{{ lblFile }}</label
-                    >
+                    <label id="lblFile" class="custom-file-label" for="file">{{
+                      lblFile
+                    }}</label>
                   </div>
                 </div>
 
