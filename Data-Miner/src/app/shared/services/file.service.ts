@@ -13,31 +13,39 @@ import { UserModel } from '../models/userModel';
 export class FileService {
   public url: string;
   public user: UserModel;
-  public bearer:string;
+  public bearer: string;
   constructor(private http: HttpClient) {
     this.url = GLOBAL.url;
-    this.user = JSON.parse(localStorage.getItem("usuario"));
-    this.bearer=''+this.user.us_athorization;
+    this.user = JSON.parse(localStorage.getItem('usuario'));
+    this.bearer = '' + this.user.us_athorization;
   }
 
-  upload(fd: FormData) {
+  upload(fd: FormData, fileUploadModel: any) {
+    interface MyObj {
+      nombre: string;
+      descripcion: string;
+    }
+
+    let json = JSON.stringify(fileUploadModel);
+    let obj: MyObj = JSON.parse(json);
+
     const headers = new HttpHeaders({
       'Access-Control-Allow-Headers': 'Content-Type',
       'Access-Control-Allow-Methods': '*',
       'Access-Control-Allow-Origin': '*',
-      'Authorization': 'Bearer ' + this.user.us_athorization
-     });
+      Authorization: 'Bearer ' + this.user.us_athorization,
+    });
 
     return this.http
       .post(
         this.url +
-        'Form/InsertaForm' +
-        '?nombre=' +
-        'test' +
-        '&descripcion=' +
-        'test' +
-        '&usuario=' +
-        this.user.us_id,
+          'Form/InsertaForm' +
+          '?nombre=' +
+          obj.nombre +
+          '&descripcion=' +
+          obj.descripcion +
+          '&usuario=' +
+          this.user.us_id,
         fd,
         {
           headers,
@@ -47,20 +55,16 @@ export class FileService {
   }
 
   getForms() {
-
     const headers = new HttpHeaders({
       'Access-Control-Allow-Headers': 'Content-Type',
       'Access-Control-Allow-Methods': '*',
       'Access-Control-Allow-Origin': '*',
-      'Authorization': 'Bearer ' + this.user.us_athorization
-     });
-     return this.http
-      .get(
-        this.url +
-        'Form/GetForms?usuario=' + this.user.us_id,
-       {headers:headers }
-      )
+      Authorization: 'Bearer ' + this.user.us_athorization,
+    });
+    return this.http
+      .get(this.url + 'Form/GetForms?usuario=' + this.user.us_id, {
+        headers: headers,
+      })
       .pipe(map((res) => res));
   }
 }
-

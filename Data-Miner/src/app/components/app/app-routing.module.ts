@@ -23,7 +23,7 @@ const routes: Routes = [
     component: DisplayComponent,
     canActivate: [AuthGuard],
   },
-  { path: 'register', component: RegisterComponent },
+  { path: 'register', component: RegisterComponent, canActivate: [AuthGuard]},
 
   { path: 'notFound', component: NotFoundComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
