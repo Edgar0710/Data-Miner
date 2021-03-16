@@ -8,6 +8,7 @@ import {
 import { GLOBAL } from './global';
 import { map } from 'rxjs/operators';
 import { UserModel } from '../models/userModel';
+import { FormModel } from 'src/app/shared/models/formModel';
 
 @Injectable()
 export class FileService {
@@ -67,4 +68,6 @@ export class FileService {
       })
       .pipe(map((res) => res));
   }
+
+  forms: FormModel[] = [];
 }
