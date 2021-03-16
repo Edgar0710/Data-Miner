@@ -1,1 +1,73 @@
-<p>display works!</p>
+<div class="container text-left">
+  <h1>
+   Nombre del Formulario: {{formulario.fr_nombre}}
+
+  </h1>
+  <blockquote class="ml-4">
+    Descripcion:<br>
+    {{formulario.fr_descripcion}}
+  </blockquote>
+
+  <div class="container-fluid text-left" id="accordion">
+    <h2>Preguntas:</h2>
+    <div class="card mt-2" *ngFor="let respuesta of formulario.respuestas">
+     <div class="card-header" >
+       <a class="btn btn-link" href="#collapse_{{respuesta.pr_id.toString()}}" data-toggle="collapse">{{respuesta.pr_pregunta}}</a>
+     </div>
+
+
+     <div id="collapse_{{+respuesta.pr_id.toString()}}" class="collapse " data-parent="#accordion">
+      <div class="card-body">
+        <div class="row no-gutters">
+          <div class="col-6 p-4 shadow-sm">
+            <h2>Participantes </h2>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table mb-0 table-center text-center">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Intentos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let encuestado of respuesta.encuestados ">
+                  <td>{{ encuestado.en_nombre}}</td>
+                  <td>{{  encuestado.en_email}}</td>
+                  <td>{{ encuestado.TotalRespuestas}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-6 p-4 shadow-sm">
+            <h2>Respuestas </h2>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table mb-0 table-center text-center">
+              <thead>
+                <tr>
+                  <th>Valor</th>
+                  <th>Cantidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let respuesta of respuesta.respuestas ">
+                  <td>{{ respuesta.rpe_valor}}</td>
+                  <td>{{  respuesta.Total}}</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+
+
+
+
+   </div>
+</div>
+
+
+

@@ -1,8 +1,7 @@
 
-export class RespuestaRespuesta {
-  constructor(rpe_valor: string,
-    Total: number){
 
-  }
 
+export interface RespuestaRespuesta {
+    rpe_valor: string;
+    Total:     number;
 }

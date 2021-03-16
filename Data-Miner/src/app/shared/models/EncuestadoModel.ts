@@ -1,9 +1,8 @@
 
 
-export class Encuestado {
-  constructor(
-  en_id:           number,
-  en_email:        string,
-  en_nombre:       string,
-  TotalRespuestas: number){}
+export interface Encuestado {
+  en_id:           number;
+  en_email:        string;
+  en_nombre:       string;
+  TotalRespuestas: number;
 }
