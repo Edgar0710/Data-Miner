@@ -29,7 +29,7 @@ import { DataTablesModule } from 'angular-datatables';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DataTablesModule
+    DataTablesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
