@@ -1,4 +1,4 @@
-<div class="container text-left">
+<div class="container text-left mt-4">
   <h1>
    Nombre del Formulario: {{formulario.fr_nombre}}
 
@@ -8,10 +8,10 @@
     {{formulario.fr_descripcion}}
   </blockquote>
 
-  <div class="container-fluid text-left" id="accordion">
+  <div class="container-fluid text-left m-4" id="accordion">
     <h2>Preguntas:</h2>
     <div class="card mt-2" *ngFor="let respuesta of formulario.respuestas">
-     <div class="card-header" >
+     <div class="card-header bg-white" >
        <a class="btn btn-link" href="#collapse_{{respuesta.pr_id.toString()}}" data-toggle="collapse">{{respuesta.pr_pregunta}}</a>
      </div>
 
@@ -55,6 +55,9 @@
                 </tr>
               </tbody>
             </table>
+            <canvas class="mycanvas">
+
+            </canvas>
           </div>
         </div>
 
@@ -71,3 +74,5 @@
 
 
 
+<div>
+  </div>
