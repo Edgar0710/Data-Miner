@@ -29,6 +29,7 @@ export class UploadFileComponent implements OnInit {
     private router: Router
   ) {
     this.fileUploadModel = new FileUploadModel('', '');
+
     //this.urlSegura = sanitizer.bypassSecurityTrustHtml(this.youtube);
   }
 
@@ -75,7 +76,7 @@ export class UploadFileComponent implements OnInit {
     );
   }
 
-  showFiles(){
+  showFiles() {
     this.router.navigate(['register']);
   }
 

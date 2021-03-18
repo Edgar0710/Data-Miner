@@ -16,7 +16,9 @@ export class RegisterComponent implements OnInit {
     this.formModel = new FormModel('', '', '');
   }
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.showForms();
+  }
 
   public showForms() {
     this.fileService.getForms().subscribe(
@@ -28,5 +30,14 @@ export class RegisterComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+  see(Id: any) {
+    console.log(Id);
+  }
+  edit(Id: any) {
+    console.log(Id);
+  }
+  delete(Id: any) {
+    console.log(Id);
   }
 }

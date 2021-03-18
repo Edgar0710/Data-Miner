@@ -1,0 +1,11 @@
+section {
+  display: flex;
+  background-color: #df5248;
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 500;
+  bottom: 0px;
+}

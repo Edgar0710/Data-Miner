@@ -1,15 +1,6 @@
 <section>
   <div class="container containerSize">
     <div class="row justify-content-center">
-      <div class="col-lg-12 mt-1 pt-1">
-        <button
-          class="btn buttonStyle shadow btn-block"
-          type="button"
-          (click)="showForms()"
-        >
-          Ver archivos
-        </button>
-      </div>
       <div class="col-lg-10 mt-1 pt-1">
         <div class="invoice-table pb-4">
           <div class="table-responsive bg-white shadow rounded">
@@ -23,19 +14,18 @@
               </thead>
               <tbody>
                 <tr *ngFor="let form of fileService.forms">
-                  <td hidden>{{ form.fr_id }}</td>
                   <td>{{ form.fr_nombre }}</td>
                   <td>{{ form.fr_descripcion }}</td>
                   <td>
-                    <button type="button" class="btn btn-info float-right">
-                      Ver
-                    </button>
-                    <button type="button" class="btn btn-info float-right">
-                      Editar
-                    </button>
-                    <button type="button" class="btn btn-info float-right">
-                      Eliminar
-                    </button>
+                    <span class="material-icons" (click)="see(form.fr_id)">
+                      pageview
+                    </span>
+                    <span class="material-icons" (click)="edit(form.fr_id)">
+                      edit
+                    </span>
+                    <span class="material-icons" (click)="delete(form.fr_id)">
+                      delete
+                    </span>
                   </td>
                 </tr>
               </tbody>
