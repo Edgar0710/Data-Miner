@@ -23,7 +23,26 @@ export class RegisterComponent implements OnInit {
     this.showForms();
   }
 
-  public showForms() {
+  ngAfterViewInit(): void {
+
+
+var $tableEncuestados=$("#table_encuestas");
+console.log($tableEncuestados);
+    $tableEncuestados.DataTable({
+
+      "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "Todos"]],
+      "language": {
+    "url":"//cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
+      },
+      "paging":   false,
+      "ordering": false,
+      "info":     false,
+      "lengthChange": false,
+      "searching": false
+  }
+  );
+  }
+  public  showForms() {
     this.fileService.getForms().subscribe(
       (response) => {
         this.fileService.forms = JSON.parse(JSON.stringify(response)).result;
@@ -45,4 +64,6 @@ export class RegisterComponent implements OnInit {
   delete(Id: any) {
     console.log(Id);
   }
+
+
 }

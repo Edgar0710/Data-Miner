@@ -54,11 +54,41 @@ export class DisplayComponent implements OnInit {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
     this.createChartsData();
+    this.formulario.respuestas.forEach(function (element, index) {
+       $("#table_enc_"+element.pr_id).DataTable({
+
+        "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "Todos"]],
+        "language": {
+      "url":"//cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
+        },
+        "paging":   true,
+        "ordering": true,
+        "info":     false,
+        "lengthChange": false,
+        "searching": true,
+    }
+    );
+       $('#table_res_'+element.pr_id).DataTable({
+
+        "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "Todos"]],
+        "language": {
+      "url":"//cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
+        },
+        "paging":   true,
+        "ordering": true,
+        "info":     false,
+        "lengthChange": false,
+        "searching": true,
+    }
+    );
+
+    });
   }
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
     this.dtTrigger.unsubscribe();
+
   }
 
   createChartsData() {
