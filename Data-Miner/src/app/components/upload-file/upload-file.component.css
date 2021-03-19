@@ -21,7 +21,7 @@ h1 {
   font-size: 40px;
 }
 .textBienvenido {
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 input[type="text"],
@@ -57,3 +57,14 @@ textarea {
     height: 40px;
   }
 }
+
+.textLink {
+  color: white;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.textLink:hover {
+  color: #3f72af;
+}
+

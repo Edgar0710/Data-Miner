@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DataTablesModule } from 'angular-datatables';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DataTablesModule } from 'angular-datatables';
     RegisterComponent,
     UploadFileComponent,
     NotFoundComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

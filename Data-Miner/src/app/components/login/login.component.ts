@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   public loginModel: LoginModel;
   public userModel: UserModel;
   public lblLogin = '';
+
   constructor(public _userService: UserService, private router: Router) {
     this.loginModel = new LoginModel('', '');
     this.userModel = new UserModel(null, '', '', '', null, '', '');
@@ -48,17 +49,23 @@ export class LoginComponent implements OnInit {
     this._userService.login(this.loginModel).subscribe(
       (response) => {
         this._userService.users = JSON.parse(JSON.stringify(response));
-
         this.userModel = JSON.parse(JSON.stringify(response)).result;
         localStorage.setItem('usuario', JSON.stringify(this.userModel));
         this.router.navigate(['upload']);
+
+        return;
       },
       (error) => {
         console.log(error);
       }
     );
 
-    this.lblLogin = 'Usuario o contraseña incorrecta';
-    return;
+    if (this.userModel.us_nombre == '') {
+      this.lblLogin = 'Usuario o contraseña incorrecta';
+      return;
+    } else {
+      this.lblLogin = 'Bienvenido';
+      return;
+    }
   }
 }

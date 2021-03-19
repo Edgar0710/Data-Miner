@@ -1,27 +1,24 @@
 <section>
-  <div class="container containerSize">
+    <div class="container containerSize">
     <div class="row justify-content-center">
       <div class="col-lg-12 my-5 col-md-12"></div>
       <div class="col-lg-5 col-md-6">
+        
         <div class="row">
           <h1 class="mx-auto text-white brandName">
             <span class="material-icons"> file_present </span>&nbsp;Data Miner
           </h1>
         </div>
-        <div class="row mt-1">
+        <div class="row mt-4">
           <div class="col-lg-12">
             <h2 class="mx-auto text-white textBienvenido text-left">
               Bienvenido {{ nombre }}
             </h2>
           </div>
         </div>
-        <div class="card border-0">
+        <div class="card border-0 pt-0">
           <div class="card-body cardLogin">
-            <form
-              #formFileUpload="ngForm"
-              class="login-form mt-4"
-              noValidate
-            >
+            <form #formFileUpload="ngForm" class="login-form mt-0" noValidate>
               <div class="row">
                 <div class="col-lg-12">
                   <div class="custom-file">
@@ -77,14 +74,10 @@
                 <div class="col-lg-12 mt-3">
                   <label id="lblUpload" class="d-block">{{ lblUpload }}</label>
                 </div>
-                <div class="col-lg-12 mt-1 pt-1">
-                  <button
-                    class="btn buttonStyle shadow btn-block"
-                    type="button"
-                    (click)="showFiles()"
-                  >
-                    Ver archivos
-                  </button>
+                <div class="col-lg-12 mt-1 pt-1 text-right">
+                  <a class="textLink" (click)="showFiles()">
+                    Ver archivos existentes
+                  </a>
                 </div>
               </div>
             </form>

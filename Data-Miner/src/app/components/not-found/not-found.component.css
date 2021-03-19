@@ -27,19 +27,13 @@
 .link_404 {
   color: #fff !important;
   padding: 10px 20px;
-  background: #df5248;
+  background:#112d4e;
   margin: 20px 0;
   display: inline-block;
   width: 200px;
   font-size: 25px;
+  border-radius: 10px;
 }
 .contant_box_404 {
   margin-top: -50px;
-}
-
-section,
-body {
-  background-color: white;
-  height: 100%;
-  width: 100%;
 }

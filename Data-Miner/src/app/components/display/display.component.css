@@ -1,0 +1,23 @@
+h1 {
+  color: white;
+}
+
+.descriptionText {
+  color: white;
+}
+
+.card-header {
+  border-radius: 30px;
+}
+
+.questionText {
+  color: #3f72af;
+}
+
+.btnColor {
+  background-color: #dbe2ef;
+}
+
+.borderColor {
+  border-color: #dbe2ef;
+}

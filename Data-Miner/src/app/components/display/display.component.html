@@ -1,82 +1,89 @@
-<div class="container text-left mt-4">
-  <h1>Nombre del Formulario: {{ formulario.fr_nombre }}</h1>
-  <blockquote class="ml-4">
-    Descripcion:<br />
-    {{ formulario.fr_descripcion }}
-  </blockquote>
+<section>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 mt-1 pt-1">
+        <h1>{{ formulario.fr_nombre }}</h1>
+        <h3 class="descriptionText">
+          {{ formulario.fr_descripcion }}
+        </h3>
 
-  <div class="container-fluid text-left m-4" id="accordion">
-    <h2>Preguntas:</h2>
-    <div class="card mt-2" *ngFor="let respuesta of formulario.respuestas">
-      <div class="card-header bg-white">
-        <a
-          class="btn btn-link"
-          href="#collapse_{{ respuesta.pr_id.toString() }}"
-          data-toggle="collapse"
-          >{{ respuesta.pr_pregunta }}</a
-        >
-      </div>
-
-      <div
-        id="collapse_{{ respuesta.pr_id.toString() }}"
-        class="collapse"
-        data-parent="#accordion"
-      >
-        <div class="card-body">
-          <div class="row no-gutters">
-            <div class="col-6 p-4 shadow-sm">
-              <h2>Participantes</h2>
-              <div class="table-responsive">
-                <!--datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"-->
-                <table
-                  id="table_enc_{{ respuesta.pr_id.toString() }}"
-                  class="table mb-0 table-center text-center table-hover"
-                >
-                  <thead>
-                    <tr>
-                      <th>Nombre</th>
-                      <th>Email</th>
-                      <th>Intentos</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let encuestado of respuesta.encuestados">
-                      <td>{{ encuestado.en_nombre }}</td>
-                      <td>{{ encuestado.en_email }}</td>
-                      <td>{{ encuestado.TotalRespuestas }}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+        <div class="container-fluid text-center" id="accordion">
+          <div
+            class="card mt-2 border-1 borderColor"
+            *ngFor="let respuesta of formulario.respuestas"
+          >
+            <div class="card-header btnColor">
+              <a
+                class="btn btn-link questionText"
+                href="#collapse_{{ respuesta.pr_id.toString() }}"
+                data-toggle="collapse"
+                >{{ respuesta.pr_pregunta }}</a
+              >
             </div>
-            <div class="col-6 p-4 shadow-sm">
-              <h2>Respuestas</h2>
-              <div class="table-responsive">
-                <table
-                  id="table_res_{{ respuesta.pr_id.toString() }}"
-                  class="table mb-0 table-center text-center"
-                >
-                  <thead>
-                    <tr>
-                      <th>Valor</th>
-                      <th>Cantidad</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let respuesta of respuesta.respuestas">
-                      <td>{{ respuesta.rpe_valor }}</td>
-                      <td>{{ respuesta.Total }}</td>
-                    </tr>
-                  </tbody>
-                </table>
+
+            <div
+              id="collapse_{{ respuesta.pr_id.toString() }}"
+              class="collapse"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <div class="row no-gutters">
+                  <div class="col-6 p-4 shadow-sm">
+                    <h2>Participantes</h2>
+                    <div class="table-responsive">
+                      <!--datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"-->
+                      <table
+                        id="table_enc_{{ respuesta.pr_id.toString() }}"
+                        class="table mb-0 table-center text-center table-hover"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Intentos</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let encuestado of respuesta.encuestados">
+                            <td>{{ encuestado.en_nombre }}</td>
+                            <td>{{ encuestado.en_email }}</td>
+                            <td>{{ encuestado.TotalRespuestas }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col-6 p-4 shadow-sm">
+                    <h2>Respuestas</h2>
+                    <div class="table-responsive">
+                      <table
+                        id="table_res_{{ respuesta.pr_id.toString() }}"
+                        class="table mb-0 table-center text-center"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Valor</th>
+                            <th>Cantidad</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let respuesta of respuesta.respuestas">
+                            <td>{{ respuesta.rpe_valor }}</td>
+                            <td>{{ respuesta.Total }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <canvas class="mycanvas"> </canvas>
+                  </div>
+                </div>
               </div>
-              <canvas class="mycanvas"> </canvas>
             </div>
           </div>
         </div>
       </div>
+
+      <div></div>
     </div>
   </div>
-</div>
-
-<div></div>
+</section>
