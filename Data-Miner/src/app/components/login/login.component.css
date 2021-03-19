@@ -1,54 +1,11 @@
-section{
-  display: flex;
-  background-color:#df5248 ;
-  height: 100%;
-}
+
 .containerSize {
   height: 100%;
-  margin-top: 0px;
   padding-top: 0px;
 }
 .rowPosition {
   margin-top: 0%;
   margin-bottom: auto;
-}
-
-.cardLogin {
-  background-color: #df5248;
-  color: white;
-}
-
-.buttonStyle {
-  background-color: #ce473c;
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
-  height: 60px;
-}
-
-input[type="email"],
-textarea {
-  background-color: #e15d51;
-  color: white;
-  height: 60px;
-}
-
-input[type="password"],
-textarea {
-  background-color: #e15d51;
-  color: white;
-  height: 60px;
-}
-
-input:focus {
-  box-shadow: 0 0 10px white;
-}
-
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 0.5; /* Firefox */
-  font-size: 20px;
 }
 
 .textIngresa {
@@ -63,24 +20,24 @@ input:focus {
   .brandName {
     font-size: 30px;
   }
-  h1{
+  h1 {
     font-size: 20px;
   }
-  .buttonStyle{
+  .buttonStyle {
     font-size: 18px;
-  height: 40px;
+    height: 40px;
   }
   input[type="email"],
-textarea {
+  textarea {
     height: 40px;
-}
-input[type="password"],
-textarea {
+  }
+  input[type="password"],
+  textarea {
     height: 40px;
-}
-::placeholder {
-  font-size: 15px;
-}
+  }
+  ::placeholder {
+    font-size: 15px;
+  }
 }
 
 .material-icons {

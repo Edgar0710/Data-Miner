@@ -27,12 +27,9 @@ export class LoginComponent implements OnInit {
       this.lblLogin = 'Ingresa tu correo y contraseña';
       return;
     }
+
     if (this.loginModel.correo == '') {
       this.lblLogin = 'Ingresa tu correo';
-      return;
-    }
-    if (this.loginModel.password == '') {
-      this.lblLogin = 'Ingresa tu contraseña';
       return;
     }
 
@@ -40,6 +37,11 @@ export class LoginComponent implements OnInit {
     var re = /@/gi;
     if (str.search(re) == -1) {
       this.lblLogin = 'Ingresa un correo válido';
+      return;
+    }
+
+    if (this.loginModel.password == '') {
+      this.lblLogin = 'Ingresa tu contraseña';
       return;
     }
 
@@ -55,6 +57,7 @@ export class LoginComponent implements OnInit {
         console.log(error);
       }
     );
+
     this.lblLogin = 'Usuario o contraseña incorrecta';
     return;
   }

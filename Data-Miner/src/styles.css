@@ -1,14 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
 
+html,
 body {
- background:white;
+  height: 100%;
+  background: white;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-section{
+section {
   overflow-y: scroll;
   scroll-behavior: smooth;
+  display: flex;
+  background-color: #112d4e;
+  height: 100%;
 }
 
+.brandName {
+  font-size: 40px;
+}
+
+.card {
+  border-radius: 30px;
+}
+.cardLogin {
+  background-color: #3f72af;
+  color: white;
+  border-radius: 10px;
+}
+
+.buttonStyle {
+  background-color: #112d4e;
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  height: 40px;
+}
+
+input[type="email"],
+textarea {
+  background-color: #dbe2ef;
+  color: #112d4e;
+  height: 60px;
+}
+
+input[type="password"],
+textarea {
+  background-color: #dbe2ef;
+  color: #112d4e;
+  height: 60px;
+}
+
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #112d4e;
+  opacity: 0.9; /* Firefox */
+  font-size: 20px;
+}
