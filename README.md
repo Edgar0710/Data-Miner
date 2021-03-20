@@ -40,7 +40,9 @@ tendra todas las reglas de negocio para procesamiento de datos
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/diagrama.png)
 ### Views
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/dataMinerLogin.jpg)
-![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/login.jpeg)
-![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/page.png)
-![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/page-2.png)
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/dataMinerUpload.jpg)
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/dataMinerRegister.jpg)
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/dataMinerDisplay.jpg)
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/dataMinerDisplayEncuestados.jpg)
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/dataMinerDisplayRespuestas.jpg)
 ## [API](https://github.com/Edgar0710/DataMiner.api)
