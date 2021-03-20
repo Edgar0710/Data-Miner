@@ -39,7 +39,7 @@ Para el backen se usara una arquitecutura en 3 una capa de acceso o Controller,L
 tendra todas las reglas de negocio para procesamiento de datos 
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/diagrama.png)
 ### Views
-![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/404.jpeg)
+![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/dataMinerLogin.jpg)
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/login.jpeg)
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/page.png)
 ![img](https://github.com/Edgar0710/Data-Miner/blob/main/documents/page-2.png)
