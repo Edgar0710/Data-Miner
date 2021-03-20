@@ -165,7 +165,7 @@ export class DisplayComponent implements OnInit {
   }
 
   regresarRegister() {
-    this.userService.goBackUpload();
+    this.userService.goBackRegister();
   }
   salir() {
     this.userService.logOut();
