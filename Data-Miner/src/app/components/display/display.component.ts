@@ -9,12 +9,13 @@ import {
 } from 'src/app/shared/models/DetalleFormularioModel';
 import { DisplayService } from 'src/app/shared/services/display.service';
 import { ChartsModule } from 'ng2-charts';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.css'],
-  providers: [DisplayService],
+  providers: [DisplayService, UserService],
 })
 export class DisplayComponent implements OnInit {
   formularioId: any;
@@ -27,7 +28,8 @@ export class DisplayComponent implements OnInit {
   dtTrigger: Subject<any> = new Subject<any>();
   constructor(
     private elementRef: ElementRef,
-    public displayservice: DisplayService
+    public displayservice: DisplayService,
+    public userService: UserService
   ) {}
 
   ngOnInit(): void {
@@ -160,5 +162,12 @@ export class DisplayComponent implements OnInit {
       //console.log(ctx);
       var tempChart = new Chart(ctx, pieData[j]);
     }
+  }
+
+  regresarRegister() {
+    this.userService.goBackUpload();
+  }
+  salir() {
+    this.userService.logOut();
   }
 }

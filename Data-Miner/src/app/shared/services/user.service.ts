@@ -10,12 +10,13 @@ import { map } from 'rxjs/operators';
 import { LoginModel } from 'src/app/shared/models/loginModel';
 import { observable } from 'rxjs';
 import { UserModel } from 'src/app/shared/models/userModel';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class UserService {
   public url: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.url = GLOBAL.url;
   }
 
@@ -47,5 +48,15 @@ export class UserService {
       .pipe(map((res) => res));
   }
 
+  logOut() {
+    localStorage.clear();
+    this.router.navigate(['login']);
+  }
+  goBackRegister() {
+    this.router.navigate(['register']);
+  }
+  goBackUpload() {
+    this.router.navigate(['upload']);
+  }
   users: UserModel[] = [];
 }

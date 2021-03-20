@@ -4,17 +4,18 @@ import { UserModel } from 'src/app/shared/models/userModel';
 import { FormModel } from 'src/app/shared/models/formModel';
 import { Router } from '@angular/router';
 import { DisplayService } from 'src/app/shared/services/display.service';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers: [FileService, DisplayService],
+  providers: [FileService, DisplayService, UserService],
 })
 export class RegisterComponent implements OnInit {
   public formModel: FormModel;
   user: UserModel = JSON.parse(localStorage.getItem('usuario'));
-  constructor(public fileService: FileService, private router: Router, public displayservice: DisplayService) {
+  constructor(public fileService: FileService, private router: Router, public displayservice: DisplayService, public userService: UserService) {
     this.formModel = new FormModel('', '', '');
   }
 
@@ -58,11 +59,11 @@ console.log($tableEncuestados);
  localStorage.setItem('formId', JSON.stringify(id));
     this.router.navigate(['display']);
   }
-  edit(Id: any) {
-    console.log(Id);
+  regresarUpload() {
+    this.userService.goBackUpload();
   }
-  delete(Id: any) {
-    console.log(Id);
+  salir() {
+    this.userService.logOut();
   }
 
 

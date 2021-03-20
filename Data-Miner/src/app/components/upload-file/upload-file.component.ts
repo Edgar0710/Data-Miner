@@ -7,12 +7,13 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { UserModel } from 'src/app/shared/models/userModel';
 import { FileUploadModel } from 'src/app/shared/models/fileUploadModel';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-upload-file',
   templateUrl: './upload-file.component.html',
   styleUrls: ['./upload-file.component.css'],
-  providers: [FileService],
+  providers: [FileService, UserService],
 })
 export class UploadFileComponent implements OnInit {
   selectedFile: File = null;
@@ -26,7 +27,8 @@ export class UploadFileComponent implements OnInit {
     private sanitizer: DomSanitizer,
     private http: HttpClient,
     public fileService: FileService,
-    private router: Router
+    private router: Router,
+    public userService: UserService
   ) {
     this.fileUploadModel = new FileUploadModel('', '');
 
@@ -78,6 +80,10 @@ export class UploadFileComponent implements OnInit {
 
   showFiles() {
     this.router.navigate(['register']);
+  }
+
+  salir() {
+    this.userService.logOut();
   }
 
   ngOnInit(): void {}

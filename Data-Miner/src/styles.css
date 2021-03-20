@@ -53,10 +53,26 @@ textarea {
   height: 60px;
 }
 
-
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #112d4e;
   opacity: 0.9; /* Firefox */
   font-size: 20px;
+}
+
+.navbar-brand {
+  font-size: 18px !important;
+  font-weight: lighter !important;
+  border: 1px !important;
+  border-style: solid !important;
+  border-radius: 5px !important;
+  padding: 8px;
+  box-sizing: unset !important;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 15px !important;
+    font-weight: lighter !important;
+  }
 }
